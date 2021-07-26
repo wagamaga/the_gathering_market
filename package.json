@@ -1,0 +1,19 @@
+{
+  "name": "the_gathering_market",
+  "version": "1.0.0",
+  "description": "The gathering market",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wagamaga/the_gathering_market"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wagamaga/the_gathering_market/issues"
+  },
+  "homepage": "https://github.com/wagamaga/the_gathering_market#readme"
+}

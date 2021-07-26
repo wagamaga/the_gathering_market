@@ -1,0 +1,26 @@
+<div class="container col-md-4">
+<h2>Добавление карточки</h2>
+<form method="POST" action="/addCard" class="card-adder" enctype="multipart/form-data">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Название</label>
+    <input type="text" class="form-control" id="cardTitle" name="cardTitle" >
+  </div>
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Описание</label>
+    <input type="text" class="form-control" id="cardDescription" name="cardDescription">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Состояние</label>
+    <input type="text" class="form-control" id="cardQuality" name="cardQuality">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Цена</label>
+    <input type="text" class="form-control" id="cardPrice" name="cardPrice" required>
+  </div>
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Загрузите картинку</label>
+   <input type="file" class="form-control" id="getFiles" name="image" >
+    </div>
+  <button type="submit" class="btn btn-primary">Добавить</button>
+</form>
+</div>

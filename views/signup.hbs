@@ -1,0 +1,33 @@
+<main>
+<div class="container col-md-4">
+<h2>Быстрая регистрация</h2> 
+  <p>Если Вы уже зарегистрированы, перейдите на страницу <a href="/login">входа в систему</a>.</p>
+  {{#if message}}
+    <p>{{message}}</p>
+  {{else}}
+  {{/if}}
+<form name="signup" method="POST" action="/signup" >
+   <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Имя</label>
+    <input name="name" type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email</label>
+    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Пароль</label>
+    <input name="password" type="password" class="form-control" id="exampleInputPassword1" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputCity" class="form-label">Город</label>
+    <input name="city" type="text" class="form-control" id="exampleInputCity">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+    <label class="form-check-label" for="exampleCheck1">Нажимая на кнопку Регистрация, я даю согласие на обработку персональных данных</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Регистрация</button>
+</form>
+</div>
+</main>

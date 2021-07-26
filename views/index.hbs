@@ -1,0 +1,65 @@
+
+  <style type="text/css">
+   h1 { 
+    font-size: 120%; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    color: #333366;
+   }
+   .container {
+     display: flex;
+     flex-wrap: wrap;
+   }
+
+   .card {
+     margin: 20px;
+     width: 17rem;
+   }
+
+   .title {
+     text-decoration: none;
+     color: black;
+   }
+
+   .btn {
+     justify-content: center;
+   }
+
+   .card-img-top {
+     width: 17rem;
+   }
+
+  </style>
+
+<main>
+  <div class="container col-md-10">
+    {{#if user}}
+    {{#each cards}}
+    <div class="card mx-auto">
+      <img src="{{this.img}}" class="card-img-top" alt="{{this.name}}">
+      <div class="card-body">
+        <a class="title" href="/card/{{this._id}}"><h5 class="card-title">{{this.name}}</h5></a>
+        <p class="card-text">Состояние: {{this.quality}}</p>
+        <h6 class="card-title">{{this.price}} ₽</h6>
+        <p class="card-text">Город: {{this.city}}</p>
+        <a href="/cart/{{this._id}}/add" class="btn btn-primary">Добавить в корзину</a>
+      </div>
+    </div>
+    {{/each}}
+    {{else}}
+    {{#each cards}}
+    <div class="card mx-auto">
+      <img src="{{this.img}}" class="card-img-top" alt="{{this.name}}">
+      <div class="card-body">
+        <a class="title" href="/card/{{this._id}}"><h5 class="card-title">{{this.name}}</h5></a>
+        <p class="card-text">Состояние: {{this.quality}}</p>
+        <h6 class="card-title">{{this.price}} ₽</h6>
+        <p class="card-text">Город: {{this.city}}</p>
+        <a href="/signup" class="btn btn-primary">Добавить в корзину</a>
+      </div>
+    </div>
+    {{/each}}
+    {{/if}}
+
+  
+  </div>
+</main>

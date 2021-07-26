@@ -1,0 +1,20 @@
+<main>
+<div class="container col-md-4">
+  <h2>Авторизация</h2>
+<form method="POST" action="/login">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email</label>
+    {{#if message}}
+      <input type="email" placeholder="{{message}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required>
+    {{else}}
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required>
+    {{/if}}
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Пароль</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" name="password" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Вход</button>
+</form>
+</div>
+</main>

@@ -1,0 +1,54 @@
+<div class="container col-md-10">
+<div class="card mx-auto" style="width: 100%;">
+  <h5 class="card-header">Информация о пользователе</h5>
+  <div class="card-body">
+    <h5 class="card-title">Имя - {{user.username}}</h5>
+    <h6 class="card-text">Адрес электронной почты - {{user.email}}</h6>
+    <h6 class="card-text">Город - {{user.city}}</h6>
+    <br>
+    <a href="/updateInfo" class="btn btn-primary">Изменить информацию о пользователе</a>
+  </div>
+</div>
+</div>
+
+<div class="container col-md-10">
+<div class="container">
+<h2>Ваши карточки</h2>   
+</div>
+  <div class="mx-auto">
+    <a class="btn btn-primary btn-lg" href="/addCard" role="button">Добавить карточку</a>
+   </div>
+</div>
+
+<div class="container col-md-10">
+    {{#each cards}}
+    <div class="card mx-auto card">
+      <img src="{{this.img}}" class="card-img-top" alt="{{this.name}}">
+      <div class="card-body">
+        <a class="title" href="/card/{{this._id}}"><h5 class="card-title">{{this.name}}</h5></a>
+        <p class="card-text">Состояние: {{this.quality}}</p>
+        <h6 class="card-title">{{this.price}} ₽</h6>
+        <a href="/profile/delete" class="btn btn-primary delete-button">Удалить</a>
+      </div>
+    </div>
+    {{/each}}
+</div>
+
+
+<style>
+.container {
+display: flex;
+flex-wrap: wrap;
+margin-bottom: 50px;
+}
+
+.card {
+    margin: 20px;
+    width: 17rem;
+  }
+
+.title {
+text-decoration: none;
+color: black;
+}
+</style>

@@ -1,0 +1,38 @@
+<div class="container col-md-10">
+<div class="container">
+<h2>Информация о карточке</h2>   
+<br>
+</div>
+
+<div class="card mb-4">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="{{card.img}}" class="img-fluid rounded-start" alt="{{card.name}}">
+    </div>
+    <div class="col-md-8 mx-auto">
+      <div class="card-body">
+        <h4 class="card-title">{{card.name}}</h4>
+
+        <p class="card-text">Описание: {{card.description}}</p>
+        <p class="card-text">Процавец: {{ownerName.username}}</p>
+        <p class="card-text">Продается в городе: {{ownerName.city}}</p>
+
+        <h6 class="card-title">{{card.price}} ₽</h6>
+        <br>
+        {{#if user}}
+
+        {{#if btn}}
+          <div></div>
+        {{else}}
+        <a href="/cart/{{card._id}}/add" class="btn btn-primary">Добавить в корзину</a>
+
+        {{/if}}
+        {{else}}
+        <a href="/signup" class="btn btn-primary">Добавить в корзину</a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
